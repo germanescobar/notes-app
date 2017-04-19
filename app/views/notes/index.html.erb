@@ -1,0 +1,22 @@
+<h1>Notas</h1>
+
+<div>
+  <%= link_to "Nueva Nota", new_note_path %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nota</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @notes.each do |note| %>
+    <tr>
+      <td><%= note.content %></td>
+      <td><%= link_to "Ver", note %> <%= link_to "Editar", edit_note_path(note) %> <%= link_to "Eliminar", note, method: :delete %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
