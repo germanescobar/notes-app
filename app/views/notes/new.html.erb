@@ -1,12 +1,20 @@
-<h1>Nueva Nota</h1>
+<div class="note-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h1>Nueva Nota</h1>
 
-<%= form_for @note do |f| %>
-  <div>
-    <%= f.label :content, "Contenido:" %><br>
-    <%= f.text_area :content, rows: 5 %>
-  </div>
+        <%= form_for @note do |f| %>
+          <div>
+            <%= f.label :content, "Contenido:" %><br>
+            <%= f.text_area :content, rows: 5, class: "form-control" %>
+          </div>
 
-  <div class="actions">
-    <%= f.submit "Crear" %>
+          <div class="actions">
+            <%= f.submit "Crear", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>
