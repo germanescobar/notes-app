@@ -19,7 +19,7 @@
           <% @notes.each do |note| %>
           <tr>
             <td><%= note.created_at %></td>
-            <td><%= note.content %></td>
+            <td><%= markdown note.content %></td>
             <td><%= link_to "Ver", note %> <%= link_to "Editar", edit_note_path(note) %> <%= link_to "Eliminar", note, method: :delete %></td>
           </tr>
           <% end %>
